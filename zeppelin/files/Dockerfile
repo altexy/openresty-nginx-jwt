@@ -9,4 +9,4 @@ ADD startup-script.sh /startup-script.sh
 ADD nginx.conf /nginx.conf
 ADD bearer.lua /bearer.lua
 
-ENTRYPOINT ["sh", "/startup-script.sh", "/usr/local/openresty/bin/openresty", "-g", "daemon off;", "-c", "/nginx.conf"]
+ENTRYPOINT ["/startup-script.sh"]
