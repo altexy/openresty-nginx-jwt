@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
+set -e
 
 # script folder detection, from http://stackoverflow.com/a/1638387/792313
-SCRIPT=$(readlink -f "$0")
-SCRIPTPATH=$(dirname "$SCRIPT")
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd $SCRIPTPATH
+cd $DIR
 
 VERSION=1.8
 
-docker build -t gpnx/jwt-nginx-proxy:$VERSION . && docker push gpnx/jwt-nginx-proxy:$VERSION
+docker build -t gpnx/jwt-nginx-proxy .
 EXIT_CODE=$?
 
 exit $EXIT_CODE
