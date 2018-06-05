@@ -3,6 +3,8 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+docker stop nginx-jwt && docker rm nginx-jwt || true
+
 sudo docker run \
 -d \
 --network=host \
