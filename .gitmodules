@@ -1,0 +1,3 @@
+[submodule "zeppelin/files/lua-resty-jwt"]
+	path = zeppelin/files/lua-resty-jwt
+	url = https://github.com/cdbattags/lua-resty-jwt.git

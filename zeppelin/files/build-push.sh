@@ -8,7 +8,7 @@ cd $DIR
 
 VERSION=1.8
 
-docker build -t gpnx/jwt-nginx-proxy:$VERSION . && docker push gpnx/jwt-nginx-proxy:$VERSION
+docker build --no-cache -t gpnx/jwt-nginx-proxy:$VERSION . && docker push gpnx/jwt-nginx-proxy:$VERSION
 #docker build -t gpnx/jwt-nginx-proxy:$VERSION .
 EXIT_CODE=$?
 
